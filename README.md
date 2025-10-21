@@ -6,6 +6,11 @@ The Trapezoidal Joint Controller is a ROS 2 control framework controller that im
 
 This controller is a `ros2_control` wrapper around the [Trapezoidal Motion Planner](https://github.com/Basiljamal1/trapezoidal_motion_planner)
 
+## Dependencies
+[Trapezoidal Motion Planner](https://github.com/Basiljamal1/trapezoidal_motion_planner)
+
+[Controller Utils](https://github.com/Basiljamal1/controller_utils)
+
 ## Architecture
 
 ### Core Components
