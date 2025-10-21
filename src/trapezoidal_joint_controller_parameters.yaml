@@ -1,0 +1,79 @@
+trapezoidal_joint_controller:
+  joints: {
+    type: string_array,
+    default_value: [],
+    description: "Names of joints used by the controller",
+    read_only: true,
+    validation: {
+      unique<>: [],
+    }
+  }
+  command_interfaces: {
+    type: string_array,
+    default_value: ["position"],
+    description: "Names of command interfaces to claim (typically position)",
+    read_only: true,
+    validation: {
+      unique<>: [],
+    }
+  }
+  state_interfaces: {
+    type: string_array,
+    default_value: ["position", "velocity"],
+    description: "Names of state interfaces to claim",
+    read_only: true,
+    validation: {
+      unique<>: [],
+    }
+  }
+  reference_interfaces: {
+    type: string_array,
+    default_value: ["position", "velocity", "acceleration"],
+    description: "Names of reference interfaces to expose",
+    read_only: true,
+    validation: {
+      unique<>: [],
+    }
+  }
+
+  control_mode: {
+    type: string,
+    description: "The control mode the controller is in. Can either be in position, velocity, or torque.",
+    default_value: "position",
+    read_only: false,
+  }
+
+  velocity_limits: {
+    type: double_array,
+    description: "The velocity limits for the joints in radians/s",
+    read_only: true,
+    default_value: [],
+  }
+
+  acceleration_limits: {
+    type: double_array,
+    description: "The acceleration limits for the joints in radians/s^2",
+    read_only: true,
+    default_value: [],
+  }
+
+  control_rate: {
+    type: double,
+    description: "Control loop rate in Hz",
+    default_value: 1000.0,
+    read_only: true,
+  }
+
+  position_limits_min: {
+    type: double_array,
+    description: "Minimum position limits for the joints (NaN for no limit)",
+    read_only: true,
+    default_value: [],
+  }
+
+  position_limits_max: {
+    type: double_array,
+    description: "Maximum position limits for the joints (NaN for no limit)",
+    read_only: true,
+    default_value: [],
+  }

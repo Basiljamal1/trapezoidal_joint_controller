@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<library path="trapezoidal_joint_controller">
+  <class name="trapezoidal_joint_controller/TrapezoidalJointController" 
+         type="trapezoidal_joint_controller::TrapezoidalJointController" 
+         base_class_type="controller_interface::ChainableControllerInterface">
+    <description>
+      A streaming controller that uses trapezoidal motion planning for smooth joint trajectories.
+      Takes position, velocity, and acceleration references and generates velocity commands.
+    </description>
+  </class>
+</library>
