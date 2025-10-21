@@ -11,6 +11,9 @@ This controller is a `ros2_control` wrapper around the [Trapezoidal Motion Plann
 
 [Controller Utils](https://github.com/Basiljamal1/controller_utils)
 
+## Upcoming future changes
+Python bindings will be made available to enable integration of this controller with machine learning frameworks such as LeRobot, and enable controller of streaming motor controller from a python interface. The architecture is purposefully designed to be lightweight with a functional programming interface, rather than object-oriented, to minimize overhead and complexity.
+
 ## Architecture
 
 ### Core Components
